@@ -1,0 +1,134 @@
+body{
+    height: 100dvh;
+    width: 100%;
+    background: hsl(0, 0%, 12%);
+    /* background: url(../img/img__banner.jpg) center; */
+    background: linear-gradient(45deg, var(--second-clr), var(--dark) 100%, var(--second-clr));
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shapes{
+    position: absolute;
+    z-index: 10;
+}
+.shapes .shape-1{
+    height: 200px;
+    width: 200px;
+    background: var(--second-clr);
+}
+.shapes .shape-2{
+    height: 200px;
+    width: 200px;
+    background: var(--second-clr);
+}
+
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    color: white;
+    padding: 2em;
+    text-align: center;
+    background: var(--container);
+    /* border: 1px solid white; */
+}
+.container h1{
+    font-size: 2.2em;
+}
+.container h1 span{
+    opacity: 1;
+    transition: 300ms ease;
+    color: var(--second-clr);
+    animation: fade 1s 1s; 
+    font-size: calc(1em + 5px);
+}
+.container p{
+    opacity: .7;
+    font-size: .9em;
+    margin-bottom: 2em;
+    animation: fade 3s;
+}
+.buttons{
+    display: flex;
+    gap: 1.2em;
+    margin-bottom: 2.5em;
+}
+
+.social__icons{
+    display: flex; 
+    gap: 1.5em;
+    justify-content: center;
+    opacity: 1;
+    animation: fTop 3s;
+}
+
+.social__icons a{
+    color: white;
+    font-size: 1.5em;
+    transition: 300ms;
+}
+.social__icons a:hover{
+    color: var(--second-clr);
+}
+
+.btn{
+    cursor: pointer;
+    position: relative;
+    background: transparent;
+    border: 1px solid white;
+    padding: .5rem 1.5em;
+    font-size: 1.2em;
+    color: white;
+    transform-style: preserve-3d;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid white;
+    transform: translateZ(-1px);
+    transition: .2s;
+}
+.btn:hover::before{
+    transform: translate(-10px, -10px) translateZ(-1px);
+    background: white;
+}
+.btn:hover{
+    background: white;
+    color: #1f1f1f;
+}
+
+.btn.btn-2:hover, .btn.btn-2:hover::before{ 
+    border: 1px solid white;
+    background: var(--second-clr);
+    color: white;
+}
+
+@keyframes fTop{
+    from{
+        transform: translateY(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: .7;
+    }
+}
