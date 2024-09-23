@@ -6,12 +6,12 @@
     text-decoration: none;
     outline: none;
     list-style: none;
-    font-family: 'outfit';
     font-family: "Varela Round", sans-serif;
+    font-family: 'outfit';
 }
 :root{
     --dark: hsl(0, 0%, 0%);
-    --second-clr : hsl(338, 88%, 33%);
+    --second-clr : hsl(205, 88%, 33%);
     --white: hsl(0, 0%, 96%);
     --container: hsla(0, 1%, 26%, 0.226);
 }
